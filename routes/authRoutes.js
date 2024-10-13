@@ -11,7 +11,7 @@ router.use(
     origin: 'https://furnishure.vercel.app'
   })
 );
-
+router.options('*', cors());
 router.get('/', test);
 router.post('/register', registerUser);
 router.post('/login', loginUser);
