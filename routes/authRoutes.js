@@ -8,7 +8,7 @@ const router = express.Router();
 router.use(
   cors({
     credentials: true,
-    origin: 'https://furnishure.vercel.app/'
+    origin: 'https://furnishure.vercel.app'
   })
 );
 
