@@ -11,6 +11,9 @@ router.use(
     origin: '*'})
 );
 router.options('*', cors());
+router.get('/test', (req, res) => {
+  res.json({ message: 'Server is running successfully!' });
+});
 router.get('/', test);
 router.post('/register', registerUser);
 router.post('/login', loginUser);
