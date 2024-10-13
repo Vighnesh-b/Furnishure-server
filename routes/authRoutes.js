@@ -8,12 +8,10 @@ const router = express.Router();
 router.use(
   cors({
     credentials: true,
-    origin: '*'})
+    origin: 'http://localhost:5173'
+  })
 );
-router.options('*', cors());
-router.get('/test', (req, res) => {
-  res.json({ message: 'Server is running successfully!' });
-});
+
 router.get('/', test);
 router.post('/register', registerUser);
 router.post('/login', loginUser);
