@@ -20,7 +20,7 @@ const app = express();
 // Enable CORS with options
 app.use(cors({
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
-    origin: 'https://furnishure.vercel.app' // Your frontend's origin
+    origin: '*' // Your frontend's origin
 }));
 
 app.use(express.json());
