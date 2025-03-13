@@ -1,20 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "index.js"
-      }
-    ],
-    "env": {
-      "MONGO_URL": "mongodb+srv://viggie198:tCeEUH8Cv5hY7PwJ@furnishure.amiu1hc.mongodb.net/?retryWrites=true&w=majority&appName=furnishure",
-      "JWT_SECRET": "VIGNESH"
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)", 
+      "dest": "index.js"
+    }
+  ],
+  "env": {
+    "MONGO_URL": "mongodb+srv://viggie198:tCeEUH8Cv5hY7PwJ@furnishure.amiu1hc.mongodb.net/?retryWrites=true&w=majority&appName=furnishure",
+    "JWT_SECRET": "VIGNESH"
   }
-  
+}

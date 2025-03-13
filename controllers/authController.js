@@ -61,8 +61,11 @@ const loginUser = async (req, res) => {
             );
             res.cookie('token', token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === 'production',
-            }).json(user);
+                secure: true,  // Ensures cookies work on HTTPS
+                sameSite: 'None',  // Required for cross-origin authentication
+                maxAge: 24 * 60 * 60 * 1000 // 1 day
+            }).json({ message: 'Login successful', user });
+            
         } else {
             return res.json({
                 error: 'Passwords do not match'

@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URL)
 const app = express();
 
 // Middleware
-app.use(cors({ credentials: true, origin: 'https://furnishure.vercel.app' })); // Allow CORS from your front-end
+app.use(cors({ credentials: true, origin: 'https://furnishure.vercel.app' })); 
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
