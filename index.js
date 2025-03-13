@@ -30,7 +30,7 @@ app.get('/test', (req, res) => {
 });
 
 // Auth routes
-app.use('/', authRoutes);
+app.use('/api', authRoutes);
 
 // Default port
 const port = process.env.PORT || 7000;
